@@ -13,14 +13,26 @@ public:
 
 	Schwein(std::string name = "Nobody");
 	~Schwein();
+
 	
+	/// <summary>
+	/// 
+	/// </summary>
 	void fressen();
 
-
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="name"> </param>
 	void set_name(const std::string& name);
 	std::string get_name() const;
 	int get_gewicht() const;
 
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <returns></returns>
 	std::string to_string() const;
 
 	Schwein & operator ++() // preincrement
