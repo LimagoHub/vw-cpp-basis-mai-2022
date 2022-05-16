@@ -36,3 +36,8 @@ int Schwein::get_gewicht() const
 	return gewicht;
 }
 
+std::string Schwein::to_string() const
+{
+	return "Schwein: Name=" + name + ", Gewicht=" + std::to_string(gewicht);
+}
+

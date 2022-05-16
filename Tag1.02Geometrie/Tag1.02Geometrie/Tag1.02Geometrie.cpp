@@ -3,10 +3,18 @@
 
 #include <iostream>
 
-
+#include  "Punkt.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Punkt a{ 1,2 };
+	Punkt b{ 3,4 };
+
+	Punkt c = a + b;
+
+
+
+	
+	std::cout << c.to_string() << std::endl;
 }
 

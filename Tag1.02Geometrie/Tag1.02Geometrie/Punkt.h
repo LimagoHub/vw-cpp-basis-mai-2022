@@ -2,6 +2,8 @@
 #include <string>
 class Punkt
 {
+
+	
 private:
 	double x;
 	double y;
@@ -44,5 +46,9 @@ public:
 	void oben();
 	void unten();
 	std::string to_string();
+
+	Punkt& operator *= (double scalar);
 };
+
+Punkt operator +(const Punkt& a, const Punkt& b);
 

@@ -28,3 +28,17 @@ std::string Punkt::to_string()
 {
 	return "Punkt: X=" + std::to_string(x) + ", Y=" + std::to_string(y);
 }
+
+Punkt& Punkt::operator *= (double scalar)
+{
+	set_x(get_x() * scalar);
+	set_y(get_y() * scalar);
+	return *this;
+}
+
+Punkt operator+(const Punkt& a, const Punkt& b)
+{
+	return Punkt{ a.get_x() + b.get_x(), a.get_y() + b.get_y() };
+}
+
+

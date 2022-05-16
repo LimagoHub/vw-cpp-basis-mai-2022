@@ -10,21 +10,23 @@
 int main()
 {
 
-	Schwein piggy;
+	Schwein piggy{"Miss Piggy"};
 	
 	
 
-	piggy.set_name( "Miss Piggy");
+	std::cout << piggy << std::endl;
+
+	piggy++;
+	
+	std::cout << piggy << std::endl;
+
 	
 
-	std::cout << piggy.to_string() << std::endl;
-
-	piggy.fressen();
 	
-	std::cout << piggy.to_string() << std::endl;
 
-	Schwein* babe = new Schwein();
+	
+	
 
-	delete babe;
+	
 
 }
