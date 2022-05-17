@@ -1,20 +1,37 @@
 #pragma once
-namespace collections {
+namespace vw
+{
+	namespace collections {
 
-	class stapel {
+		class stapel {
 
-	public:
-		stapel();
+			int *data;// Bitte nicht, sondern Vector verwenden
+			size_t index;
+			size_t size;
 
-		///
-		///
-		void push(const int value);
+			void init(const stapel& other)  noexcept;
+		
+		public:
+			stapel(size_t size = 10)  noexcept;
 
-		int pop();
+			// Copy-Constrctor
+			stapel(const stapel& other)  noexcept;
+			
+			~stapel() noexcept;
 
-		bool is_empty() const;
-		bool is_full() const;
+			///
+			///
+			void push(const int value);
 
-	};
+			int pop();
 
+			bool is_empty() const noexcept;
+			bool is_full() const noexcept;
+			
+
+			stapel& operator = (const stapel& other);
+			
+		};
+
+	}
 }

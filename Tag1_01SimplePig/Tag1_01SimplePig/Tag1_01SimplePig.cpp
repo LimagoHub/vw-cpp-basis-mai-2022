@@ -10,10 +10,12 @@
 int main()
 {
 
-	Schwein piggy{"Miss Piggy"};
+	Schwein piggy{ "Miss Piggy" };
 	
-	
+	Schwein babe;
 
+	babe = piggy;
+	
 	std::cout << piggy << std::endl;
 
 	piggy++;

@@ -17,9 +17,16 @@ void Schwein::set_gewicht(int gewicht)
 
 Schwein::Schwein(std::string name):gewicht(10)
 {
+
+	std::cout << "CTOR" << std::endl;
 	set_name(name);
 	
 }
+
+//Schwein::Schwein(const Schwein& other)
+//{
+//	std::cout << "Copy-CTOR" << std::endl;
+//}
 
 Schwein::~Schwein()
 {

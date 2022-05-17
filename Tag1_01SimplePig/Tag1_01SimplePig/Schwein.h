@@ -12,6 +12,12 @@ private:
 public:
 
 	Schwein(std::string name = "Nobody");
+	
+
+	Schwein(const Schwein& other)=default;
+
+	Schwein& operator = (const Schwein& other) = default;
+	
 	~Schwein();
 
 	
