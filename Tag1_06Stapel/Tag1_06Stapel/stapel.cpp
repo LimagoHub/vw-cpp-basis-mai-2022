@@ -42,7 +42,7 @@ bool vw::collections::stapel::is_empty() const noexcept
 bool vw::collections::stapel::is_full() const noexcept
 {
 	
-	return index >= sizeof(data)/sizeof(int);
+	return index >= size;
 }
 
 

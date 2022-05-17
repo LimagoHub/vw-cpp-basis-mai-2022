@@ -19,10 +19,21 @@ int main()
 				my_stack.push(i);
 			}
 		}
+
+		stapel my_other_stack = std::move(my_stack);
+		
+
+		
 		while (!my_stack.is_empty())
 		{
 			std::cout << my_stack.pop() << std::endl;
 		}
+
+		while (!my_other_stack.is_empty())
+		{
+			std::cout << my_other_stack.pop() << std::endl;
+		}
+		
 	} catch (std::overflow_error & e)
 	{
 		std::cout << e.what() << std::endl;

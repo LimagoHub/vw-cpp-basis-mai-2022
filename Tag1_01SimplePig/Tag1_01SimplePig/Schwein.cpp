@@ -7,6 +7,8 @@ void Schwein::fressen()
 
 void Schwein::set_name(const std::string& name)
 {
+
+	// Falscher Name (Elsa) soll zu einem Fehler führen.
 	this->name = name;
 }
 

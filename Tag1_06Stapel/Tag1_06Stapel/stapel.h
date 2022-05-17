@@ -16,6 +16,18 @@ namespace vw
 
 			// Copy-Constrctor
 			stapel(const stapel& other)  noexcept;
+
+			// Move-Constructor
+			stapel(stapel&& other)  noexcept
+			{
+				data = other.data;
+				size = other.size;
+				index = other.index;
+
+				other.data = nullptr;
+				other.size = 0;
+				other.index = 0;
+			}
 			
 			~stapel() noexcept;
 
@@ -30,7 +42,16 @@ namespace vw
 			
 
 			stapel& operator = (const stapel& other);
-			
+			stapel& operator = (stapel&& other)
+			{
+				data = other.data;
+				size = other.size;
+				index = other.index;
+
+				other.data = nullptr;
+				other.size = 0;
+				other.index = 0;
+			}
 		};
 
 	}
