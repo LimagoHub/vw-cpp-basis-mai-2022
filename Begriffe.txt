@@ -1,0 +1,25 @@
+Objekt
+Instanz
+Klasse
+Referenz
+Konstruktor
+Destruktor
+setter/getter
+inline
+
+
+Methodenüberladung
+Operatorenüberladung
+
+try catch
+const noexcept
+
+Goldene Regel:
+
+wenn entweder der Copy-Constructor oder der Destruktor oder der Zuweisungsoperator
+überladen werden, dann müssen alle drei überladen werden
+
+RValue und LValue
+
+Movesemantik
+

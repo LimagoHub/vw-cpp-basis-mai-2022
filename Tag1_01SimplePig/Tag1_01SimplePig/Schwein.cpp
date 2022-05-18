@@ -22,6 +22,7 @@ Schwein::Schwein(std::string name):gewicht(10)
 
 	std::cout << "CTOR" << std::endl;
 	set_name(name);
+	anzahl++;
 	
 }
 
@@ -33,6 +34,7 @@ Schwein::Schwein(std::string name):gewicht(10)
 Schwein::~Schwein()
 {
 	std::cout << "Quuuiiiiek" << std::endl;
+	anzahl--;
 }
 
 std::string Schwein::get_name() const
@@ -49,4 +51,6 @@ std::string Schwein::to_string() const
 {
 	return "Schwein: Name=" + name + ", Gewicht=" + std::to_string(gewicht);
 }
+
+int Schwein::anzahl = 0;
 

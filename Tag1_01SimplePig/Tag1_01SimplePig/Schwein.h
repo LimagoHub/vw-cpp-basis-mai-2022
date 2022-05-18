@@ -7,10 +7,18 @@ class Schwein
 private:
 	std::string name;
 	int gewicht;
+	static int anzahl; // shared variable
+	
 	void set_gewicht(int gewicht);
 
+	
 public:
 
+	static int get_anzahl()
+	{
+		return anzahl;
+	}
+	
 	Schwein(std::string name = "Nobody");
 	
 

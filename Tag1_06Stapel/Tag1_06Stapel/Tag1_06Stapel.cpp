@@ -7,32 +7,37 @@
 using namespace vw::collections;
 
 
+void main_impl()
+{
+	stapel my_stack;
+
+	for (int i = 0; i < 10; ++i)
+	{
+		if (!my_stack.is_full())
+		{
+			my_stack.push(i);
+		}
+	}
+
+	stapel my_other_stack = std::move(my_stack);
+		
+
+		
+	while (!my_stack.is_empty())
+	{
+		std::cout << my_stack.pop() << std::endl;
+	}
+
+	while (!my_other_stack.is_empty())
+	{
+		std::cout << my_other_stack.pop() << std::endl;
+	}
+}
+
 int main()
 {
 	try {
-		stapel my_stack;
-
-		for (int i = 0; i < 10; ++i)
-		{
-			if (!my_stack.is_full())
-			{
-				my_stack.push(i);
-			}
-		}
-
-		stapel my_other_stack = std::move(my_stack);
-		
-
-		
-		while (!my_stack.is_empty())
-		{
-			std::cout << my_stack.pop() << std::endl;
-		}
-
-		while (!my_other_stack.is_empty())
-		{
-			std::cout << my_other_stack.pop() << std::endl;
-		}
+		main_impl();
 		
 	} catch (std::overflow_error & e)
 	{
