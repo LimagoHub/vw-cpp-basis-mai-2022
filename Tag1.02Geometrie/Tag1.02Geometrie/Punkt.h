@@ -25,10 +25,13 @@ private:
 
 		this->y = y;
 	}
+protected:
+	
 
 public:
 
 	Punkt(double x = 0.0, double y = 0.0);
+	virtual ~Punkt(){}
 
 	double get_x() const
 	{
@@ -45,7 +48,7 @@ public:
 	void links();
 	void oben();
 	void unten();
-	std::string to_string();
+	virtual std::string to_string();
 
 	Punkt& operator *= (double scalar);
 };

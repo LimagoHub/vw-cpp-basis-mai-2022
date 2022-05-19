@@ -13,23 +13,23 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headerdateien\games">
+      <UniqueIdentifier>{1b62cefb-f780-402c-98f8-e2bdd34b1cba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tag1.02Geometrie.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Punkt.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Kreis.cpp">
+    <ClCompile Include="Tag4_01nimSpielProjekt.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Punkt.h">
+    <ClInclude Include="game.h">
+      <Filter>Headerdateien\games</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClient.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Kreis.h">
+    <ClInclude Include="nim_game_impl.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

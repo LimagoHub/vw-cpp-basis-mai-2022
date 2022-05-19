@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9566c549-4f55-46a5-b5ec-18ee0a6cc610}</ProjectGuid>
-    <RootNamespace>Tag102Geometrie</RootNamespace>
+    <ProjectGuid>{d47f2e23-ea90-4c83-b660-92bcc7591f43}</ProjectGuid>
+    <RootNamespace>Tag401nimSpielProjekt</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,13 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Kreis.cpp" />
-    <ClCompile Include="Punkt.cpp" />
-    <ClCompile Include="Tag1.02Geometrie.cpp" />
+    <ClCompile Include="Tag4_01nimSpielProjekt.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Kreis.h" />
-    <ClInclude Include="Punkt.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="GameClient.h" />
+    <ClInclude Include="nim_game_impl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

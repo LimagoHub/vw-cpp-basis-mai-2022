@@ -8,6 +8,7 @@ class myclass
 public:
 	myclass()
 	{
+		// throw bla;
 		std::cout << "MyClass CTOR\n";
 	}
 
@@ -25,6 +26,8 @@ public:
 
 int main()
 {
+
+	auto aptr = std::make_unique<myclass>(new myclass);
 
 	
 	

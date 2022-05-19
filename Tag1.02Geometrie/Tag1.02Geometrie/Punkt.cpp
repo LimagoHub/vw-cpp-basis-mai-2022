@@ -1,9 +1,10 @@
 #include "Punkt.h"
-
+#include <iostream>
 Punkt::Punkt(double x, double y): MAX(10.0)
 {
 	set_x(x);
 	set_y(y);
+	std::cout << "CTOR Punkt" << std::endl;
 }
 
 void Punkt::rechts(double offset)
