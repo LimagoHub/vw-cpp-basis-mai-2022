@@ -142,9 +142,15 @@
     <ClCompile Include="Tag4_01nimSpielProjekt.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="abstract_game.h" />
+    <ClInclude Include="abstract_game_player.h" />
+    <ClInclude Include="abstract_nim_game_player.h" />
+    <ClInclude Include="computer_player.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="GameClient.h" />
+    <ClInclude Include="human_player.h" />
     <ClInclude Include="nim_game_impl.h" />
+    <ClInclude Include="player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

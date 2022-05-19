@@ -16,6 +16,15 @@
     <Filter Include="Headerdateien\games">
       <UniqueIdentifier>{1b62cefb-f780-402c-98f8-e2bdd34b1cba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\games\nim_game">
+      <UniqueIdentifier>{e5886bd8-4951-48b6-9651-95b60e5baa51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\games\nim_game\nim_game_player">
+      <UniqueIdentifier>{cdc1f87e-e100-42db-9e01-27ae29f90bc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\games\player">
+      <UniqueIdentifier>{ded38c74-3a18-4b3e-875d-4befb288fb6a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tag4_01nimSpielProjekt.cpp">
@@ -30,7 +39,25 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="nim_game_impl.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\games\nim_game</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract_nim_game_player.h">
+      <Filter>Headerdateien\games\nim_game\nim_game_player</Filter>
+    </ClInclude>
+    <ClInclude Include="human_player.h">
+      <Filter>Headerdateien\games\nim_game\nim_game_player</Filter>
+    </ClInclude>
+    <ClInclude Include="computer_player.h">
+      <Filter>Headerdateien\games\nim_game\nim_game_player</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Headerdateien\games\player</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract_game_player.h">
+      <Filter>Headerdateien\games\player</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract_game.h">
+      <Filter>Headerdateien\games</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
