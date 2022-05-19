@@ -150,6 +150,7 @@
     <ClInclude Include="GameClient.h" />
     <ClInclude Include="human_player.h" />
     <ClInclude Include="nim_game_impl.h" />
+    <ClInclude Include="oma_player.h" />
     <ClInclude Include="player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

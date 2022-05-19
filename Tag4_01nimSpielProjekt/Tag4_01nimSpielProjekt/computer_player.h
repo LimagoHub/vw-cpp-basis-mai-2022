@@ -18,9 +18,9 @@ namespace vw {
 
 			int do_turn(const int& stones) override
 			{
-				int move;
+				
 				const std::vector<int> moves { 3,1,1,2 };
-				move = moves[stones % 4];
+				int move = moves[stones % 4];
 				std::cout << "Computer nimmt " << move << " Steine" << std::endl;
 				return move;
 			}

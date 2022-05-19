@@ -54,6 +54,11 @@ namespace vw {
 				this->current_player = current_player;
 			}
 
+			void write(std::string message)
+			{
+				std::cout << message << std::endl;
+			}
+			
 			virtual bool is_move_valid() = 0;
 			
 			virtual void update_game() = 0;
@@ -98,7 +103,7 @@ namespace vw {
 			bool players_turn_is_invalid()
 			{
 				if (is_move_valid()) return false;
-				std::cout << "Ungueltiger zug" << std::endl;
+				write( "Ungueltiger zug");
 				return true;
 			}
 
@@ -110,7 +115,7 @@ namespace vw {
 
 			void write_game_over_message_if_game_is_over()
 			{
-				if (is_game_over()) std::cout << get_current_player()->get_name() << " hat verloren." << std::endl;
+				if (is_game_over()) write( get_current_player()->get_name() + " hat verloren.");
 
 			}
 		
