@@ -18,19 +18,19 @@ namespace vw
 			struct kettenglied
 			{
 				
-				std::shared_ptr<kettenglied> nach;
-				std::weak_ptr<kettenglied> vor;
+				std::shared_ptr<kettenglied<T>> nach;
+				std::weak_ptr<kettenglied<T>> vor;
 				T data;
 
 
 				kettenglied(T data)
-					: data(data), nach{nullptr}, vor{nullptr}
+					: data(data), nach{nullptr}, vor{nach}
 				{
 				}
 			};
 
-			std::shared_ptr<kettenglied> start;
-			std::shared_ptr<kettenglied> akt;
+			std::shared_ptr<kettenglied<T>> start;
+			std::shared_ptr<kettenglied<T>> akt;
 		
 		public:
 
@@ -55,6 +55,10 @@ namespace vw
 					neu->vor = akt;
 				}
 				akt = neu;
+			}
+			bool update(T value) override
+			{
+				return false;
 			}
 			bool remove() override{
 				return false;

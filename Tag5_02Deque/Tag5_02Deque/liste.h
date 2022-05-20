@@ -17,6 +17,7 @@ namespace vw
 			/// </summary>
 			/// <param name="value"></param>
 			virtual void append(T value) = 0;
+			virtual bool update(T value) = 0;
 			virtual bool remove() = 0;
 			virtual void clear() = 0;
 			virtual T get() const = 0; // Ab c++17 bitte mit Optional
