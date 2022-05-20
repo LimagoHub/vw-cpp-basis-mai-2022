@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClInclude Include="linked_list_impl.h" />
     <ClInclude Include="liste.h" />
+    <ClInclude Include="ListeClient.h" />
     <ClInclude Include="Schwein.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

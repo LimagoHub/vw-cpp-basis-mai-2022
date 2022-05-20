@@ -1,6 +1,8 @@
 #pragma once
 #include <memory>
 #include "liste.h"
+
+using namespace std;
 namespace vw
 {
 	namespace collections
@@ -40,14 +42,43 @@ namespace vw
 			}
 
 
-			void append(T value) override;
-			bool remove() override;
-			void clear() override;
-			T get() const override;
-			bool move_first() override;
-			bool move_last() override;
-			bool move_previous() override;
-			bool move_next() override;
+			void append(T value) override
+			{
+				shared_ptr<kettenglied<T>> neu{ new kettenglied<T>{value} };
+				if(is_empty())
+				{
+					start =  neu;
+				} else
+				{
+					move_last();
+					akt->nach = neu;
+					neu->vor = akt;
+				}
+				akt = neu;
+			}
+			bool remove() override{
+				return false;
+			}
+			void clear() override
+			{
+				
+			}
+			T get() const override
+			{
+				return {};
+			}
+			bool move_first() override {
+				return false;
+			}
+			bool move_last() override {
+				return false;
+			}
+			bool move_previous() override {
+				return false;
+			}
+			bool move_next() override {
+				return false;
+			}
 
 			
 			bool is_empty() const override
