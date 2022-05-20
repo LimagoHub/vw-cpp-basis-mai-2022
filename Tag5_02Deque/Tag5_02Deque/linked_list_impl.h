@@ -64,6 +64,28 @@ namespace vw
 			}
 			bool remove() override{
 				if (is_empty()) return false;
+
+				if(is_begin_of_list() && is_end_of_list())
+				{
+					start.reset();
+					akt.reset();
+					
+				} else if (is_begin_of_list())
+				{
+					start = akt = akt->nach;
+					akt->vor.reset();
+				} else if (is_end_of_list())
+				{
+					move_previous();
+					akt->nach.reset();
+				} else
+				{
+					akt->vor.lock()->nach = akt->nach;
+					akt->nach->vor = akt->vor;
+					move_next();
+				}
+
+				return true;
 			}
 			
 			T get() const override
