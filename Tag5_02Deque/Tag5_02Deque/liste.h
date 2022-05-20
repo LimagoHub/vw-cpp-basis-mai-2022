@@ -19,11 +19,23 @@ namespace vw
 			virtual void append(T value) = 0;
 			virtual bool update(T value) = 0;
 			virtual bool remove() = 0;
-			virtual void clear() = 0;
+			
 			virtual T get() const = 0; // Ab c++17 bitte mit Optional
 			
-			virtual bool move_first() = 0;
-			virtual bool move_last() = 0;
+			virtual void clear() 
+			{
+				while (remove());
+			}
+			virtual bool move_first()  {
+				if (is_empty()) return false;
+				while (move_previous());
+				return true;
+			}
+			virtual bool move_last() {
+				if (is_empty()) return false;
+				while (move_next());
+				return true;
+			}
 			virtual bool move_previous() = 0;
 			virtual bool move_next() = 0;
 
